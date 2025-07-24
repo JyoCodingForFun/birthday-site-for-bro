@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>🎂 Blow Out the Candles</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("sea3.png") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #daf8f6;
+      font-size: 36px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    h6{
+        color: #f9f2ad;
+         position: absolute;
+      top: 35px;
+      left: 20%;
+      transform: translateX(-50%);
+       font-size: 25px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+
+    }
+
+   body {
+  background-color: #333;
+}
+
+.cake {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: -125px;
+}
+
+.plate {
+  width: 270px;
+  height: 110px;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: #48acbc;
+  border-radius: 50%;
+  box-shadow:
+    0 2px 0 #b3b3b3,
+    0 4px 0 #b3b3b3,
+    0 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cake > * {
+  position: absolute;
+}
+
+.layer {
+  display: block;
+  width: 250px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(107, 69, 129);
+  box-shadow:
+    0 2px 0px #f7d5a3,
+    0 4px 0px #fce5bd,
+    0 6px 0px #fee6bc,
+    0 8px 0px #f8e7cb,
+    0 10px 0px  #9fb1ef,
+    0 12px 0px  #b9e0f8,
+    0 14px 0px #714dbe,
+    0 16px 0px #a9c3f8,
+    0 18px 0px  #814da4,
+    0 20px 0px #abb2fb,
+    0 22px 0px #f9e3c2,
+    0 24px 0px #f8e5c8,
+    0 26px 0px #ffedd2,
+    0 28px 0px #fae1bb,
+    0 30px 0px #fae6cb;
+}
+
+.layer-top { top: 0px; }
+.layer-middle { top: 33px; }
+.layer-bottom { top: 66px; }
+
+.icing {
+  top: 2px;
+  left: 5px;
+  background-color: rgb(108, 74, 128);
+  width: 240px;
+  height: 90px;
+  border-radius: 90%;
+  position: absolute;
+  z-index: 2;
+}
+
+.icing::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  bottom: 6px;
+  left: 5px;
+  background-color: rgb(128, 79, 156);
+  box-shadow:
+    0 0 4px     rgb(148, 85, 186);
+    0 0 4px    rgb(221, 181, 246);
+    0 0 4px    rgb(221, 181, 246);
+  border-radius: 75%;
+  z-index: 1;
+}
+
+.drip {
+  display: block;
+  width: 50px;
+  height: 70px;
+  border-bottom-left-radius: 26px;
+  border-bottom-right-radius: 28px;
+  background-color:rgb(103, 62, 126);
+  position: absolute;
+}
+
+.drip1 {
+  top: 53px;
+  left: 5px;
+  transform: skewY(15deg);
+  height: 48px;
+  width: 40px;
+}
+
+.drip2 {
+  top: 69px;
+  left: 181px;
+  transform: skewY(-15deg);
+}
+
+.drip3 {
+  top: 54px;
+  left: 90px;
+  width: 80px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.candle {
+  background-color: #7b020b;
+  width: 16px;
+  height: 50px;
+  border-radius: 8px / 4px;
+  top: -20px;
+  left: 50%;
+  margin-left: -8px;
+  z-index: 10;
+  position: absolute;
+}
+
+.candle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ce5d63;
+}
+
+.flame {
+  position: absolute;
+  background-color: orange;
+  width: 15px;
+  height: 35px;
+  border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+  top: -34px;
+  left: 50%;
+  margin-left: -7.5px;
+  z-index: 10;
+  box-shadow:
+    0 0 10px rgba(255, 165, 0, 0.5),
+    0 0 20px rgba(255, 165, 0, 0.5),
+    0 0 60px rgba(255, 165, 0, 0.5),
+    0 0 80px rgba(255, 165, 0, 0.5);
+  transform-origin: 50% 90%;
+  animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: skewX(5deg);
+    box-shadow:
+      0 0 10px rgba(255, 165, 0, 0.2),
+      0 0 20px rgba(255, 165, 0, 0.2),
+      0 0 60px rgba(255, 165, 0, 0.2),
+      0 0 80px rgba(255, 165, 0, 0.2);
+  }
+  25% {
+    transform: skewX(-5deg);
+    box-shadow:
+      0 0 10px rgba(255, 165, 0, 0.5),
+      0 0 20px rgba(255, 165, 0, 0.5),
+      0 0 60px rgba(255, 165, 0, 0.5),
+      0 0 80px rgba(255, 165, 0, 0.5);
+  }
+  50% {
+    transform: skewX(10deg);
+    box-shadow:
+      0 0 10px rgba(255, 165, 0, 0.3),
+      0 0 20px rgba(255, 165, 0, 0.3),
+      0 0 60px rgba(255, 165, 0, 0.3),
+      0 0 80px rgba(255, 165, 0, 0.3);
+  }
+  75% {
+    transform: skewX(-10deg);
+    box-shadow:
+      0 0 10px rgba(255, 165, 0, 0.4),
+      0 0 20px rgba(255, 165, 0, 0.4),
+      0 0 60px rgba(255, 165, 0, 0.4),
+      0 0 80px rgba(255, 165, 0, 0.4);
+  }
+  100% {
+    transform: skewX(5deg);
+    box-shadow:
+      0 0 10px rgba(255, 165, 0, 0.5),
+      0 0 20px rgba(255, 165, 0, 0.5),
+      0 0 60px rgba(255, 165, 0, 0.5),
+      0 0 80px rgba(255, 165, 0, 0.5);
+  }
+}
+
+
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-800px); opacity: 0; }
+}
+
+#birthdayCard {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #dcb3fac8;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #0006;
+  display: none;
+  z-index: 999;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, 20%); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.glow-text {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #ff00de,
+    0 0 20px #ff00de,
+    0 0 30px #ff00de,
+    0 0 40px #ff00de,
+    0 0 55px #ff00de,
+    0 0 75px #ff00de;
+}
+
+@media screen and (max-width: 600px) {
+  .glow-text {
+    font-size: 20px;
+    top: 20px;
+  }
+
+  .cake {
+    max-width: 220px;
+  }
+
+  .birthday-message {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <h1 class="glow-text">🎉🥳 Happy Birthday Bhaii!! 🎉🥳</h1>
+
+  <div class="cake">
+    <div class="plate"></div>
+    <div class="layer layer-bottom"></div>
+    <div class="layer layer-middle"></div>
+    <div class="layer layer-top"></div>
+    <div class="icing"></div>
+    <div class="drip drip1"></div>
+    <div class="drip drip2"></div>
+    <div class="drip drip3"></div>
+    <div class="candle">
+      <div class="flame" id="flame"></div>
+    </div>
+  </div>
+    <div id="birthdayCard">
+  <p>🎊Happiest Birthday,Bhaiyuuu!!!🤗🎉🎂<br>
+Friends may come and go, but siblings are forever and I really lucked out with you. You're the reason I laugh a little louder, smile a little wider, and feel a lot stronger.
+You’ve always been my guide, my support system, and sometimes even my personal therapist 😄❤️.
+To the one who set the gold standard for being an awesome big brother Happy Birthday!!!✨😁
+May God bless you with everything your heart wishes for.✨🎁🍀
+Keep shining, keep smiling, and keep being the coolest bhai ever.🤞🏼🤗
+Have the happiest birthday today and always!❤️🎉🥳
+Love you always, Bhai.🥰🤗😁💫</p>
+</div>
+  <!-- 🎵 Background Birthday Music -->
+ <audio id="confettiSound" src="Confetti.mp3"></audio>
+<audio id="bdayMusic" src="hbd.mp3" loop></audio>
+
+  <!-- 🎉 Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <!-- 🎤 Microphone Detection Script -->
+  <script>
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(stream => {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const mic = audioContext.createMediaStreamSource(stream);
+        const analyser = audioContext.createAnalyser();
+        analyser.fftSize = 512;
+        const data = new Uint8Array(analyser.fftSize);
+        mic.connect(analyser);
+
+        function detectBlow() {
+          
+          analyser.getByteTimeDomainData(data);
+          const average = data.reduce((a, b) => a + Math.abs(b - 128), 0) / data.length;   
+          if (average > 15) {
+            const flame = document.getElementById('flame');
+            if (flame) flame.style.display = 'none';
+                 
+setTimeout(() => {
+  document.getElementById('birthdayCard').style.display = 'block';
+}, 2000);
+            // 🎉 Confetti burst!
+            confetti({
+              particleCount: 200,
+              spread: 70,
+              origin: { y: 0.6 }
+            });
+            document.getElementById('confettiSound').play();
+            document.getElementById('bdayMusic').play();
+           // showWishes();
+           
+          }
+
+          requestAnimationFrame(detectBlow);
+          
+        }
+
+        detectBlow();
+      })
+      .catch(err => {
+        alert("Mic access denied: " + err.message);
+      });
+
+       function showWishes() {
+    const messages = ['🎉 Happy Birthday!'];
+    messages.forEach((msg, i) => {
+      const wish = document.createElement('div');
+      wish.textContent = msg;
+      wish.style.position = 'absolute';
+      wish.style.left = Math.random() * 80 + 10 + '%';
+      wish.style.bottom = '-50px';
+      wish.style.fontSize = '24px';
+      wish.style.color = '#fff';
+      wish.style.textShadow = '1px 1px 5px #000';
+      wish.style.animation = `floatUp 4s ease-out ${i * 0.5}s forwards`;
+      document.body.appendChild(wish);
+    });
+  }
+
+   // Floating animation
+  const style = document.createElement('style');
+  style.innerHTML = `
+    @keyframes floatUp {
+      0% { opacity: 0; transform: translateY(0); }
+      100% { opacity: 1; transform: translateY(-600px); }
+    }
+  `;
+  document.head.appendChild(style);
+  
+  </script>
+</body>
+</html>

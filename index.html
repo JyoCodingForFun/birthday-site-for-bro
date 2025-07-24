@@ -37,6 +37,7 @@
 
    body {
   background-color: #333;
+     
 }
 
 .cake {
@@ -248,19 +249,23 @@
 
 #birthdayCard {
   position: fixed;
-  top: 20%;
+  top: 30%;
   left: 50%;
-  transform: translateX(-50%);
-  background: #dcb3fac8;
-  padding: 20px 40px;
+  transform: translate(-50%, -50%);
+  background: #66377cc8;
+  padding: 20px 20px;
   border-radius: 15px;
   box-shadow: 0 0 30px #0006;
   display: none;
   z-index: 999;
-  font-size: 20px;
-  color: #333;
+  font-size: 4vw;
+  color: #ecf2fa;
   text-align: center;
   animation: fadeIn 2s ease-in-out forwards;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 @keyframes fadeIn {
